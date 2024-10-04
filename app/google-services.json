@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "380871507577",
+    "project_id": "petlife-911bd",
+    "storage_bucket": "petlife-911bd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:380871507577:android:3e7961b9601f7f00d21ea8",
+        "android_client_info": {
+          "package_name": "com.example.login"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVcCslaMpvjfnKyJgChcsXfhTTdP55z_0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
