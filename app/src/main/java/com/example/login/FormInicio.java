@@ -15,7 +15,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class FormInicio extends AppCompatActivity {
 
-    private Button button_info, button_deslogar;
+    private Button button_info, button_deslogar, button_tosa;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,9 +47,18 @@ public class FormInicio extends AppCompatActivity {
                 finish();
             }
         });
+        button_tosa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(FormInicio.this, FormTosa.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
     private void iniciarComponente(){
         button_info = findViewById(R.id.button_informacao);
         button_deslogar = findViewById(R.id.bt_deslogar);
+        button_tosa = findViewById(R.id.bt_tosar);
     }
 }

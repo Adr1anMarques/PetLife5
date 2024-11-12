@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FormTosa">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="419dp"
+        android:layout_height="23dp"
+        android:background="@color/ciano"
+        android:text="Tosa"
+        android:textAlignment="center"
+        android:textColor="@color/branco"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.909"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="173dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logopet" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Escolha o tipo de tosa do seu Pet"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <RadioButton
+        android:id="@+id/radioButton_higienica"
+        android:layout_width="371dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="44dp"
+        android:text="Tosa higiênica"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <RadioButton
+        android:id="@+id/radioButton_tesoura"
+        android:layout_width="371dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="16dp"
+        android:text="Tosa na tesoura"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioButton_higienica" />
+
+    <RadioButton
+        android:id="@+id/radioButton_maquina"
+        android:layout_width="371dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="16dp"
+        android:text="Tosa na maquina"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioButton_tesoura" />
+
+    <RadioButton
+        android:id="@+id/radioButton_bebe"
+        android:layout_width="371dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="16dp"
+        android:text="Tosa bebê"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioButton_maquina" />
+
+    <RadioButton
+        android:id="@+id/radioButton_verao"
+        android:layout_width="371dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="16dp"
+        android:text="Tosa verão"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioButton_bebe" />
+
+    <Button
+        android:id="@+id/bt_escolher"
+        android:layout_width="177dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="74dp"
+        android:backgroundTint="@color/ciano"
+        android:text="Concluir pedido"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioButton_verao" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
