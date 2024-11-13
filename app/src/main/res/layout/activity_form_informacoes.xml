@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/branco"
     tools:context=".FormInformacoes">
 
     <TextView
@@ -121,6 +122,7 @@
         android:layout_marginTop="44dp"
         android:backgroundTint="@color/ciano"
         android:text="Salvar"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"

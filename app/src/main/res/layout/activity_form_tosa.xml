@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/branco"
     tools:context=".FormTosa">
 
     <TextView
@@ -111,6 +112,7 @@
         android:layout_marginTop="74dp"
         android:backgroundTint="@color/ciano"
         android:text="Concluir pedido"
+        android:textColor="#FEFFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioButton_verao" />

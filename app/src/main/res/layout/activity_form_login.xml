@@ -92,6 +92,7 @@
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/ciano"
         android:text="Entrar"
+        android:textColor="#FEFFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
@@ -104,6 +105,7 @@
         android:backgroundTint="@color/ciano"
         android:onClick="telaCadastro"
         android:text="Cadastra-se"
+        android:textColor="#FEFFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
