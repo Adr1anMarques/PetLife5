@@ -24,38 +24,38 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 import java.util.Map;
 
-public class FormTosa extends AppCompatActivity {
-   private Button bt_salvar;
-   private RadioGroup rd_grupo;
-   String usuarioID;
+public class FormPagamento extends AppCompatActivity {
+    private Button bt_concluirPedido;
+    private RadioGroup rd_grupo2;
+    String usuarioID;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_form_tosa);
+        setContentView(R.layout.activity_form_pagamento);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        iniciarComponentes();
+        inciarlizarComponentes();
 
-
-        rd_grupo.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        rd_grupo2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 RadioButton opcao = findViewById(i);
-                String tosa = opcao.getText().toString();
+                String pagamento = opcao.getText().toString();
+
                 FirebaseFirestore banco = FirebaseFirestore.getInstance();
 
-                Map<String,Object> tosas = new HashMap<>();
-                tosas.put("tosa",tosa);
+                Map<String,Object> pagamentos = new HashMap<>();
+                pagamentos.put("pagamento",pagamento);
                 usuarioID = FirebaseAuth.getInstance().getCurrentUser().getUid();
-                DocumentReference documentReference = banco.collection("TOSA").document(usuarioID);
+                DocumentReference documentReference = banco.collection("PAGAMENTO").document(usuarioID);
 
-                documentReference.set(tosas).addOnSuccessListener(new OnSuccessListener<Void>() {
+                documentReference.set(pagamentos).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void unused) {
                                 Log.d("banco","Dados salvos com SUCESSO");
@@ -68,26 +68,20 @@ public class FormTosa extends AppCompatActivity {
                             }
                         });
 
-
             }
         });
-
-
-        bt_salvar.setOnClickListener(new View.OnClickListener() {
+        bt_concluirPedido.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(FormTosa.this, FormPagamento.class);
+                Intent intent = new Intent(FormPagamento.this, FormPedidoFeito .class);
                 startActivity(intent);
                 finish();
-
             }
         });
+
     }
-
-
-
-    public void iniciarComponentes(){
-        bt_salvar= findViewById(R.id.bt_concluir);
-        rd_grupo = findViewById(R.id.radioGruop);
+    private void inciarlizarComponentes(){
+        bt_concluirPedido = findViewById(R.id.bt_concluir);
+        rd_grupo2 = findViewById(R.id.radioGroup2);
     }
 }

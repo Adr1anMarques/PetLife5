@@ -1,5 +1,6 @@
 package com.example.login;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -42,6 +43,9 @@ public class FormInformacoes extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 SalvarDados();
+                Intent intent = new Intent(FormInformacoes.this, FormInicio.class);
+                startActivity(intent);
+                finish();
             }
         });
     }
