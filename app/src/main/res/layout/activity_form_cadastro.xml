@@ -5,107 +5,90 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/branco"
+    android:background="@drawable/bacground"
     tools:context=".FormCadastro">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="419dp"
-        android:layout_height="23dp"
-        android:background="@color/ciano"
-        android:text="Cadastro"
-        android:textAlignment="center"
-        android:textColor="@color/branco"
-        android:textSize="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.909"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="173dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="50dp"
+        android:id="@+id/imageView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logopet" />
+        app:srcCompat="@drawable/baseline_assignment_add_24" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
-        android:layout_width="353dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="150dp"
-        android:background="@color/white"
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="265dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="35dp"
+        android:fontFamily="sans-serif-light"
+        android:text="Faça seu cadastro agora!"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3">
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <LinearLayout
+        android:layout_width="410dp"
+        android:layout_height="490dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <EditText
             android:id="@+id/edit_email"
-            android:layout_width="341dp"
-            android:layout_height="51dp"
-            android:layout_weight="1"
+            android:layout_width="358dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginRight="30dp"
             android:ems="10"
-            android:hint="Email*"
+            android:hint="escreva seu email*"
             android:inputType="textEmailAddress" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
-        android:layout_width="353dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="211dp"
-        android:background="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3">
 
         <EditText
             android:id="@+id/edit_senha"
-            android:layout_width="341dp"
-            android:layout_height="51dp"
-            android:layout_weight="1"
+            android:layout_width="358dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
             android:ems="10"
-            android:hint="Escolha uma senha*"
-            android:inputType="textEmailAddress" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
-        android:layout_width="353dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="271dp"
-        android:background="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3">
+            android:hint="escreva sua senha*"
+            android:inputType="textPassword" />
 
         <EditText
             android:id="@+id/edit_nome"
-            android:layout_width="341dp"
-            android:layout_height="51dp"
-            android:layout_weight="1"
+            android:layout_width="358dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
             android:ems="10"
-            android:hint="nome*"
-            android:inputType="textEmailAddress" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:hint="escreva seu nome*"/>
 
-    <Button
-        android:id="@+id/bt_cadastrar"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="36dp"
-        android:backgroundTint="@color/ciano"
-        android:onClick="telaCadastroFeito"
-        android:text="Cadastre-se"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        <Button
+            android:id="@+id/bt_cadastrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="65dp"
+            android:layout_marginRight="100dp"
+            android:backgroundTint="@color/azul"
+            android:text="cadastrar"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 

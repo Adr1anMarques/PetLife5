@@ -85,7 +85,7 @@ public class FormCadastro extends AppCompatActivity {
 
                 if(task.isSuccessful()){
                     SalvarDados();
-                    Intent intent = new Intent(FormCadastro.this,FormCadastroFeito.class);
+                    Intent intent = new Intent(FormCadastro.this,FormInicio.class);
                     startActivity(intent);
                 }else{
                     String erro;

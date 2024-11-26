@@ -73,7 +73,7 @@ public class FormPagamento extends AppCompatActivity {
         bt_concluirPedido.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(FormPagamento.this, FormPedidoFeito .class);
+                Intent intent = new Intent(FormPagamento.this, FormInicio.class);
                 startActivity(intent);
                 finish();
             }

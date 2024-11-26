@@ -5,89 +5,99 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/branco"
+    android:background="@drawable/bacground"
     tools:context=".FormPagamento">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="419dp"
-        android:layout_height="23dp"
-        android:background="@color/ciano"
-        android:text="PAGAMENTO"
+        android:id="@+id/textView2"
+        android:layout_width="265dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif-light"
+        android:text="Pagamentos!"
         android:textAlignment="center"
-        android:textColor="@color/branco"
-        android:textSize="16dp"
+        android:textColor="@color/white"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.909"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="173dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logopet" />
-
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="252dp"
-        android:layout_height="29dp"
-        android:layout_marginTop="52dp"
-        android:text="Formas de Pagamento"
-        android:textAlignment="center"
-        android:textColor="@color/ciano"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
-
-    <RadioGroup
-        android:id="@+id/radioGroup2"
-        android:layout_width="182dp"
-        android:layout_height="201dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14">
-
-        <RadioButton
-            android:id="@+id/radioButton6"
-            android:layout_width="match_parent"
-            android:layout_height="67dp"
-            android:text="Dinheiro"
-            android:textColor="@color/black" />
-
-        <RadioButton
-            android:id="@+id/radioButton7"
-            android:layout_width="match_parent"
-            android:layout_height="67dp"
-            android:text="PIX"
-            android:textColor="@color/black" />
-
-        <RadioButton
-            android:id="@+id/radioButton9"
-            android:layout_width="match_parent"
-            android:layout_height="67dp"
-            android:text="Cartão"
-            android:textColor="@color/black" />
-
-    </RadioGroup>
-    <Button
-        android:id="@+id/bt_concluir"
-        android:layout_width="177dp"
-        android:layout_height="49dp"
-        android:layout_marginBottom="24dp"
-        android:backgroundTint="@color/ciano"
-        android:text="Concluir pedido"
-        android:textColor="#FEFFFFFF"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="410dp"
+        android:layout_height="463dp"
+        android:background="@color/white"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <RadioGroup
+            android:id="@+id/radioGroup2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:id="@+id/radioButton1"
+                android:layout_width="match_parent"
+                android:layout_height="61dp"
+                android:text="Dinheiro" />
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="match_parent"
+                android:layout_height="61dp"
+                android:text="Pix" />
+
+            <RadioButton
+                android:id="@+id/radioButton3"
+                android:layout_width="match_parent"
+                android:layout_height="61dp"
+                android:text="Cartão" />
+
+            <Button
+                android:id="@+id/bt_concluir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="100dp"
+                android:backgroundTint="@color/azul"
+                android:text="Avançar"
+                android:textColor="@color/white" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_width="411dp"
+        android:layout_height="323dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imageViewpa"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginLeft="65dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="0dp"
+            app:srcCompat="@drawable/baseline_monetization_on_24" />
+
+        <ImageView
+            android:id="@+id/imageViewcar"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="0dp"
+            app:srcCompat="@drawable/cartao" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,4 +4,10 @@
     <color name="white">#FFFFFFFF</color>
     <color name="branco">#eff1f8</color>
     <color name="ciano">#004f4d</color>
+    <color name="cianoClaro">#006A68</color>
+    <color name="azul">#1C3D72</color>
+    <color name="azulclaro">#0E4D82</color>
+
+
+
 </resources>

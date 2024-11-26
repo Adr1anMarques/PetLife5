@@ -5,117 +5,92 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/branco"
+    android:background="@drawable/bacground"
     tools:context=".FormTosa">
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="419dp"
-        android:layout_height="23dp"
-        android:background="@color/ciano"
-        android:text="Tosa"
-        android:textAlignment="center"
-        android:textColor="@color/branco"
-        android:textSize="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.909"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="173dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="50dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="80dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logopet" />
+        app:srcCompat="@drawable/tesoura" />
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Escolha o tipo de tosa do seu Pet"
-        android:textSize="15dp"
-        android:textStyle="bold"
+    <ImageView
+        android:id="@+id/imageVie"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/brilho" />
 
-    <Button
-        android:id="@+id/bt_concluir"
-        android:layout_width="177dp"
-        android:layout_height="49dp"
-        android:layout_marginBottom="64dp"
-        android:backgroundTint="@color/ciano"
-        android:text="Avançar"
-        android:textColor="#FEFFFFFF"
+    <LinearLayout
+        android:layout_width="410dp"
+        android:layout_height="553dp"
+        android:background="@color/white"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
 
-    <RadioGroup
-        android:id="@+id/radioGruop"
-        android:layout_width="260dp"
-        android:layout_height="258dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="120dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8">
-
-        <RadioButton
-            android:id="@+id/radioButton"
+        <RadioGroup
+            android:id="@+id/radioGruop"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tosa na tesoura"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"
-            android:textColorLink="@color/ciano" />
+            android:layout_marginTop="60dp">
 
-        <RadioButton
-            android:id="@+id/radioButton3"
+            <RadioButton
+                android:id="@+id/radioButton"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:text="Tosa na maquina" />
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:text="Tosa na tesoura" />
+
+            <RadioButton
+                android:id="@+id/radioButton3"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:text="Tosa higienica" />
+
+            <RadioButton
+                android:id="@+id/radioButton4"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:text="Tosa verão" />
+
+            <RadioButton
+                android:id="@+id/radioButton5"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:text="Tosa bebe" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/bt_concluir"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tosa na maquina"
-            android:textColor="@color/black"
-            android:textColorHighlight="@color/black"
-            android:textColorHint="@color/black"
-            android:textColorLink="@color/ciano" />
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="100dp"
+            android:backgroundTint="@color/azul"
+            android:text="Avançar"
+            android:textColor="@color/white" />
 
-        <RadioButton
-            android:id="@+id/radioButton2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Tosa verão"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"
-            android:textColorLink="@color/ciano" />
-
-        <RadioButton
-            android:id="@+id/radioButton4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Tosa higienica"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"
-            android:textColorLink="@color/ciano" />
-
-        <RadioButton
-            android:id="@+id/radioButton5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:buttonTint="@color/ciano"
-            android:text="Tosa bebê"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"
-            android:textColorLink="@color/ciano" />
-    </RadioGroup>
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
